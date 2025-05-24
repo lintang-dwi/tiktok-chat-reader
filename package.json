@@ -1,0 +1,20 @@
+{
+  "name": "tiktok-chat-reader",
+  "version": "1.0.0",
+  "description": "TikTok Live Chat Reader with Svelte, Express, and Socket.IO",
+  "main": "server/server.js",
+  "scripts": {
+    "install-all": "npm install && (cd client && npm install) && (cd server && npm install)",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "build:client": "cd client && npm run build",
+    "start": "npm run build:client && node server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
